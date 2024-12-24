@@ -274,6 +274,7 @@ header .navbar a:hover {
   text-align: center;
   padding: 2rem;
   background: #fff;
+  height: 100%;
 }
 
 .speciality .box-container .box .content img {
@@ -638,9 +639,9 @@ header .navbar a:hover {
     font-size: 50%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   #menu-bar {
-    display: inline;
+    display: block;
   }
   #x {
     display: none;

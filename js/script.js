@@ -16,46 +16,40 @@ const navLinks = document.querySelectorAll('.navbar a');
 const openNavBtn = document.querySelector('#menu-bar');
 const closeNavBtn = document.querySelector('#x');
 
-navLinks.forEach((link)=>{
-  if (window.innerWidth < 800) {
-    link.addEventListener('click',()=>{
-      nav.style.display = "none";
-      closeNavBtn.style.display = "none";
-      openNavBtn.style.display = "block";
-    })
-  }
-  link.addEventListener('click',closeNav)
-})
 function openNav() {
   nav.style.display = 'block';
-  closeNavBtn.style.display = 'inline-block';
+  closeNavBtn.style.display = 'block';
   openNavBtn.style.display = 'none';
 }
 openNavBtn.addEventListener('click',openNav)
 
 function closeNav() {
   nav.style.display = 'none';
-  openNavBtn.style.display = 'inline-block';
+  openNavBtn.style.display = 'block';
   closeNavBtn.style.display = 'none';
 }
 closeNavBtn.addEventListener('click',closeNav)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener('resize', () => {
+  navLinks.forEach((link)=>{
+    if (window.innerWidth > 767) {
+      link.addEventListener('click',()=>{
+        nav.style.display = "none";
+        closeNavBtn.style.display = "none";
+        openNavBtn.style.display = "block";
+      })
+      // إعادة ضبط الحالة للشاشات الكبيرة
+      nav.style.display = 'block';
+      openNavBtn.style.display = 'none';
+      closeNavBtn.style.display = 'none';
+    } else {
+      // إعادة ضبط الحالة للشاشات الصغيرة (اختياري)
+      nav.style.display = 'none';
+      openNavBtn.style.display = 'block';
+      closeNavBtn.style.display = 'none';
+    }
+  })
+});
 
 
 let btnTop = document.querySelector(".scroll-to-top");
@@ -77,7 +71,7 @@ btnTop.addEventListener('click',()=>{
 
 function loader(){
   document.querySelector('.loader-container').classList.add('fade-out');
-  document.body.style.overflow = "hidden";
+  document.body.style.overflow = "hidden !important";
 }
 
 function fadeOut(){

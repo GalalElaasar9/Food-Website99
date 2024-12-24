@@ -167,6 +167,9 @@ header .navbar a:hover{
   padding: 0.5rem 1.5rem;
   display: none;
 }
+
+
+
 /* end of header */
 
 /* start of home */
@@ -256,6 +259,7 @@ header .navbar a:hover{
   text-align: center;
   padding: 2rem;
   background: #fff;
+  height: 100%;
 }
 .speciality .box-container .box .content img{
   margin: 1.5rem 0;
@@ -579,10 +583,10 @@ header .navbar a:hover{
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:767px) {
 
   #menu-bar{
-    display: inline;
+    display: block;
   }
   #x{
     display: none;
