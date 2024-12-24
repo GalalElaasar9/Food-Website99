@@ -69,14 +69,14 @@ btnTop.addEventListener('click',()=>{
   })
 })
 
-// function loader(){
-//   document.querySelector('.loader-container').classList.add('fade-out');
-//   document.body.style.overflow = "hidden";
-// }
+function loader(){
+  document.querySelector('.loader-container').classList.add('fade-out');
+  document.body.style.overflow = "hidden";
+}
 
-// function fadeOut(){
-//   setInterval(loader, 3000)
-// }
-// window.addEventListener('load',fadeOut)
+function fadeOut(){
+  setInterval(loader, 3000)
+}
+window.addEventListener('load',fadeOut)
 
 
